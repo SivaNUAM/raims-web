@@ -3,6 +3,7 @@ import { ArrowUpRight, Compass, Globe2, HeartHandshake, Sparkles } from "lucide-
 import { motion as Motion } from "framer-motion";
 import { Reveal, Stagger } from "./Motion";
 import { revealItem } from "./motionVariants";
+import founderPortrait from "../../assets/images/tony-joseph.jpg";
 
 const values = [
   {
@@ -39,6 +40,17 @@ function AboutSection() {
               Our people-first approach is shaped around the skills, standards,
               and realities of each market.
             </p>
+            <div className="founder-profile">
+              <img
+                src={founderPortrait}
+                alt="Tony Joseph, Founder and CEO of Amentis 7 Global Recruitment"
+                loading="lazy"
+              />
+              <div className="founder-profile-copy">
+                <span>FOUNDER &amp; CEO</span>
+                <strong>Tony Joseph</strong>
+              </div>
+            </div>
             <a className="underlined-link" href="#approach">
               A little more about us <ArrowUpRight size={15} />
             </a>
