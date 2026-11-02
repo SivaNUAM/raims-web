@@ -2,13 +2,15 @@ import { createElement } from "react";
 import {
   ArrowUpRight,
   BadgeCheck,
-  Mail,
   MapPin,
   Megaphone,
   ShieldCheck,
   WalletCards,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Reveal } from "./Motion";
+
+const whatsappChannelUrl = "https://whatsapp.com/channel/0029Vb8pKiQ4yltLgvh0aO0J";
 
 const commitments = [
   {
@@ -92,19 +94,15 @@ function TrustContactSection() {
             <span className="trust-contact-kicker">AMENTIS 7 GLOBAL RECRUITMENT</span>
             <p>Connecting Talent. Creating Futures.</p>
           </div>
-          <a className="trust-contact-link" href="mailto:admin@amentis7global.com">
-            <span className="trust-contact-link-icon"><Mail size={17} /></span>
-            <span><small>EMAIL OUR TEAM</small><strong>admin@amentis7global.com</strong></span>
-            <ArrowUpRight size={16} />
-          </a>
           <a
             className="trust-contact-link"
-            href="https://www.instagram.com/amentis7global/"
+            href={whatsappChannelUrl}
             target="_blank"
             rel="noreferrer"
+            aria-label="Follow the Amentis 7 Global verified WhatsApp channel"
           >
-            <span className="trust-contact-link-icon trust-instagram-icon">IG</span>
-            <span><small>FOLLOW ON INSTAGRAM</small><strong>@amentis7global</strong></span>
+            <span className="trust-contact-link-icon trust-whatsapp-icon"><FaWhatsapp size={19} /></span>
+            <span><small>FOLLOW OUR VERIFIED CHANNEL</small><strong>Amentis 7 Global on WhatsApp</strong></span>
             <ArrowUpRight size={16} />
           </a>
           <div className="trust-contact-address">

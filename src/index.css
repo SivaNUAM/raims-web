@@ -3458,7 +3458,7 @@ h2 em,
 
 .trust-contact-details {
   display: grid;
-  grid-template-columns: 1.15fr 1fr 0.9fr 1.2fr;
+  grid-template-columns: 1.15fr 1fr 1.2fr;
   gap: 12px;
   margin-top: 25px;
   padding-top: 22px;
@@ -3552,6 +3552,10 @@ h2 em,
   font-size: 10px;
   font-weight: 700;
   letter-spacing: -0.5px;
+}
+
+.trust-whatsapp-icon {
+  color: #43d18b;
 }
 
 .trust-contact-address {
