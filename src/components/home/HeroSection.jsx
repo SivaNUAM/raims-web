@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Globe2, HeartPulse } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Globe2 } from "lucide-react";
 import { Reveal } from "./Motion";
 
 function HeroSection() {
@@ -8,7 +8,7 @@ function HeroSection() {
         <div className="eyebrow"><span /> GLOBAL RECRUITMENT. HUMAN APPROACH.</div>
         <h1>Global talent.<br />Real-world<br /><span>impact.</span></h1>
         <p className="hero-description">
-          One recruitment partner for healthcare and every industry beyond it.
+          One recruitment partner across industries.
           We connect the right people with the places they can make a difference.
         </p>
         <div className="hero-actions">
@@ -16,15 +16,14 @@ function HeroSection() {
             Find your people <ArrowUpRight size={16} />
           </a>
           <a className="text-link" href="#sectors">
-            Explore our sectors <ArrowDown size={15} />
+            Explore our industries <ArrowDown size={15} />
           </a>
         </div>
         <div className="hero-proof">
           <div className="hero-sector-badges">
-            <span><HeartPulse size={13} /> HEALTHCARE</span>
-            <span><Globe2 size={13} /> EVERY INDUSTRY</span>
+            <span><Globe2 size={13} /> GLOBAL INDUSTRIES</span>
           </div>
-          <p><strong>One global partner.</strong><br />Talent for every kind of team.</p>
+          <p><strong>One global partner.</strong><br />Talent for every kind of business.</p>
         </div>
       </Reveal>
 
@@ -43,7 +42,7 @@ function HeroSection() {
           <Globe2 size={19} strokeWidth={1.5} />
           <span>Rooted locally.<br /><strong>Connected globally.</strong></span>
         </div>
-        <div className="hero-side-note">HEALTHCARE<br />AND BEYOND <span>↗</span></div>
+        <div className="hero-side-note">INDUSTRY<br />AND BEYOND <span>↗</span></div>
         <div className="hero-index">PEOPLE · EVERYWHERE</div>
       </Reveal>
     </section>

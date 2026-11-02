@@ -18,7 +18,7 @@ function Marquee() {
       <div className="marquee-track">
         {Array.from({ length: 2 }, (_, row) => (
           <span className="marquee-group" key={row} aria-hidden={row === 1}>
-            GLOBAL HEALTHCARE TALENT <span>✳</span> PEOPLE FOR EVERY INDUSTRY <span>✳</span> BETTER TEAMS, EVERYWHERE <span>✳</span>
+            GLOBAL INDUSTRY TALENT <span>✳</span> PEOPLE FOR EVERY BUSINESS <span>✳</span> BETTER TEAMS, EVERYWHERE <span>✳</span>
           </span>
         ))}
       </div>

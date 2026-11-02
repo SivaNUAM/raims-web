@@ -26,18 +26,18 @@ function AboutSection() {
   return (
     <section className="intro-section section-wrap" id="about">
       <Reveal>
-        <div className="section-kicker"><span>01</span> GLOBAL RECRUITMENT. TWO DISTINCT PRACTICES.</div>
+        <div className="section-kicker"><span>01</span> GLOBAL RECRUITMENT. ONE CLEAR FOCUS.</div>
         <div className="intro-grid">
           <h2>Better people.<br />Stronger teams.<br /><em>Everywhere.</em></h2>
           <div className="intro-copy">
             <p className="intro-lead">
-              From frontline care to the boardroom, the right people make a real difference.
+              The right people make a real difference in every industry.
             </p>
             <p>
-              We connect employers with exceptional healthcare and
-              non-healthcare talent around the world. One people-first
-              approach, shaped to the skills, standards, and realities of
-              each industry and each market.
+              We connect employers with exceptional talent across technology,
+              finance, engineering, consumer, and supply chain industries.
+              Our people-first approach is shaped around the skills, standards,
+              and realities of each market.
             </p>
             <a className="underlined-link" href="#approach">
               A little more about us <ArrowUpRight size={15} />
@@ -57,7 +57,7 @@ function AboutSection() {
       </Stagger>
       <div className="stat-note about-note">
         <Sparkles size={17} />
-        <span>Healthcare expertise.<br /><strong>Cross-industry reach.</strong></span>
+        <span>Industry insight.<br /><strong>Global talent reach.</strong></span>
       </div>
     </section>
   );

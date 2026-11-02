@@ -80,7 +80,7 @@ const opportunities = [
     route: "Work permit",
     pay: "€2,200–€3,500 / month",
     timeline: "Approx. 5–6 months",
-    roles: ["Warehouse & production", "Kitchen assistant", "Care roles", "Hospitality"],
+    roles: ["Warehouse & production", "Kitchen assistant", "Hospitality"],
   },
   {
     country: "Albania",

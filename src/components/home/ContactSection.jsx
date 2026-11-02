@@ -8,7 +8,7 @@ function ContactSection() {
       <div className="contact-content">
         <div className="section-kicker"><span>YOUR NEXT CHAPTER</span></div>
         <h2>Let&apos;s find<br /><em>your people.</em></h2>
-        <p>Whether you&apos;re growing a care team or building your business, let&apos;s find the right people—wherever they are.</p>
+        <p>Whether you&apos;re growing your team or building your business, let&apos;s find the right people—wherever they are.</p>
         <a className="button button-lime" href="mailto:admin@amentis7global.com">
           admin@amentis7global.com <ArrowUpRight size={17} />
         </a>

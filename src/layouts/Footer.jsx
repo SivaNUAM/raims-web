@@ -29,8 +29,7 @@ const companyLinks = [
 ];
 
 const practiceLinks = [
-  { label: "Healthcare recruitment", href: "#healthcare" },
-  { label: "Non-healthcare recruitment", href: "#non-healthcare" },
+  { label: "Industries we serve", href: "#sectors" },
   { label: "Recruitment services", href: "#services" },
 ];
 
@@ -48,7 +47,7 @@ function Footer() {
           </a>
           <p>
             Connecting Talent. Creating Futures. Thoughtful international
-            recruitment across healthcare and every industry beyond it.
+            recruitment across global industries.
           </p>
           <a className="luxury-footer-contact" href="#contact">
             Start a conversation <MoveUpRight size={15} />
@@ -74,7 +73,7 @@ function Footer() {
         </nav>
 
         <nav className="luxury-footer-column" aria-label="Recruitment practice links">
-          <h2>OUR PRACTICES</h2>
+          <h2>INDUSTRIES</h2>
           {practiceLinks.map((link) => (
             <a href={link.href} key={link.href}>{link.label}</a>
           ))}
@@ -85,7 +84,7 @@ function Footer() {
           <span className="luxury-footer-note-label">PEOPLE WITHOUT BORDERS</span>
           <p>Global perspective.<br /><strong>Human connection.</strong></p>
           <a href="#sectors" aria-label="Explore our recruitment sectors">
-            Explore our sectors <ArrowUpRight size={14} />
+            Explore our industries <ArrowUpRight size={14} />
           </a>
         </div>
       </div>
@@ -111,7 +110,7 @@ function Footer() {
 
       <div className="luxury-footer-bottom">
         <span>© {new Date().getFullYear()} Amentis 7 Global Recruitment</span>
-        <span className="luxury-footer-location"><span /> HEALTHCARE · NON-HEALTHCARE · GLOBAL</span>
+        <span className="luxury-footer-location"><span /> GLOBAL INDUSTRY RECRUITMENT</span>
         <a href="#home">Back to top <ArrowRight size={13} /></a>
       </div>
     </footer>

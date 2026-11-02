@@ -1,5 +1,5 @@
 import { createElement } from "react";
-import { ArrowUpRight, BriefcaseBusiness, Compass, HeartPulse, Search, UsersRound } from "lucide-react";
+import { ArrowUpRight, BriefcaseBusiness, Compass, Search, UsersRound } from "lucide-react";
 import { motion as Motion } from "framer-motion";
 import { Reveal, Stagger } from "./Motion";
 import { revealItem } from "./motionVariants";
@@ -7,27 +7,20 @@ import { revealItem } from "./motionVariants";
 const services = [
   {
     number: "01",
-    title: "Healthcare recruitment",
-    description: "Clinical, allied health, life sciences, and healthcare leadership talent.",
-    icon: HeartPulse,
-    tag: "HEALTHCARE",
+    title: "Industry recruitment",
+    description: "Specialist hiring across technology, finance, engineering, and more.",
+    icon: UsersRound,
+    tag: "GLOBAL INDUSTRIES",
   },
   {
     number: "02",
-    title: "Non-healthcare recruitment",
-    description: "Specialist hiring across technology, finance, engineering, and more.",
-    icon: UsersRound,
-    tag: "ALL INDUSTRIES",
-  },
-  {
-    number: "03",
     title: "Executive search",
     description: "The leaders who see what’s next—and have the experience to get you there.",
     icon: BriefcaseBusiness,
     tag: "LEADERSHIP",
   },
   {
-    number: "04",
+    number: "03",
     title: "Contract & permanent hiring",
     description: "Flexible talent solutions for immediate needs and long-term growth.",
     icon: Compass,
