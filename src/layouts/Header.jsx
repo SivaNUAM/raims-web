@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { ArrowDownRight, ArrowUpRight, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
 const navigation = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Our sectors", href: "#sectors" },
-  { label: "Global opportunities", href: "#opportunities" },
-  { label: "For candidates", href: "#candidates" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Our sectors", href: "/sectors" },
+  { label: "Global opportunities", href: "/opportunities" },
 ];
 
 function Header() {
@@ -18,9 +18,9 @@ function Header() {
   return (
     <header className="site-header luxury-header">
       <div className="luxury-header-inner">
-        <a
+        <Link
           className="luxury-wordmark"
-          href="#home"
+          to="/"
           aria-label="Amentis 7 Global Recruitment home"
           onClick={closeMenu}
         >
@@ -29,7 +29,7 @@ function Header() {
             <span className="luxury-wordmark-name">Amentis <em>7</em></span>
             <span className="luxury-wordmark-descriptor">GLOBAL RECRUITMENT</span>
           </span>
-        </a>
+        </Link>
 
         <button
           className="luxury-menu-toggle"
@@ -48,22 +48,22 @@ function Header() {
           aria-label="Main navigation"
         >
           {navigation.map((item, index) => (
-            <a href={item.href} key={item.href} onClick={closeMenu}>
+            <Link to={item.href} key={item.href} onClick={closeMenu}>
               <span className="luxury-nav-index">0{index + 1}</span>
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a className="luxury-nav-cta" href="#contact" onClick={closeMenu}>
+          <Link className="luxury-nav-cta" to="/contact" onClick={closeMenu}>
             Let&apos;s talk <ArrowUpRight size={15} strokeWidth={1.7} />
-          </a>
+          </Link>
         </nav>
       </div>
       <div className="luxury-header-rule" aria-hidden="true">
         <span />
       </div>
-      <a className="luxury-header-scroll" href="#about" aria-label="Scroll to about">
+      <Link className="luxury-header-scroll" to="/about" aria-label="Explore about Amentis 7">
         <ArrowDownRight size={15} />
-      </a>
+      </Link>
     </header>
   );
 }

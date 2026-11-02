@@ -1,4 +1,5 @@
 import { ArrowRight, ArrowUpRight, Globe2, MapPin, MoveUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
 const offices = [
@@ -15,16 +16,16 @@ const offices = [
 ];
 
 const companyLinks = [
-  { label: "About us", href: "#about" },
-  { label: "Our approach", href: "#approach" },
-  { label: "Global opportunities", href: "#opportunities" },
-  { label: "Recruitment transparency", href: "#recruitment-notice" },
-  { label: "Candidate support", href: "#candidates" },
+  { label: "About us", href: "/about" },
+  { label: "Our services", href: "/services" },
+  { label: "Global opportunities", href: "/opportunities" },
+  { label: "Recruitment transparency", href: "/opportunities#recruitment-notice" },
+  { label: "Candidate support", href: "/contact" },
 ];
 
 const practiceLinks = [
-  { label: "Industries we serve", href: "#sectors" },
-  { label: "Recruitment services", href: "#services" },
+  { label: "Industries we serve", href: "/sectors" },
+  { label: "Recruitment services", href: "/services" },
 ];
 
 function Footer() {
@@ -32,20 +33,20 @@ function Footer() {
     <footer className="site-footer luxury-footer">
       <div className="luxury-footer-main">
         <div className="luxury-footer-brand">
-          <a className="luxury-wordmark luxury-footer-wordmark" href="#home">
+          <Link className="luxury-wordmark luxury-footer-wordmark" to="/">
             <img src={Logo} alt="Amentis 7 Global Recruitment" loading="lazy" />
             <span className="luxury-wordmark-copy">
               <span className="luxury-wordmark-name">Amentis <em>7</em></span>
               <span className="luxury-wordmark-descriptor">GLOBAL RECRUITMENT</span>
             </span>
-          </a>
+          </Link>
           <p>
             Connecting Talent. Creating Futures. Thoughtful international
             recruitment across global industries.
           </p>
-          <a className="luxury-footer-contact" href="#contact">
+          <Link className="luxury-footer-contact" to="/contact">
             Start a conversation <MoveUpRight size={15} />
-          </a>
+          </Link>
           <a className="luxury-footer-email" href="mailto:admin@amentis7global.com">
             admin@amentis7global.com
           </a>
@@ -62,14 +63,14 @@ function Footer() {
         <nav className="luxury-footer-column" aria-label="Company links">
           <h2>DISCOVER</h2>
           {companyLinks.map((link) => (
-            <a href={link.href} key={link.href}>{link.label}</a>
+            <Link to={link.href} key={link.href}>{link.label}</Link>
           ))}
         </nav>
 
         <nav className="luxury-footer-column" aria-label="Recruitment practice links">
           <h2>INDUSTRIES</h2>
           {practiceLinks.map((link) => (
-            <a href={link.href} key={link.href}>{link.label}</a>
+            <Link to={link.href} key={link.href}>{link.label}</Link>
           ))}
         </nav>
 
@@ -77,9 +78,9 @@ function Footer() {
           <span className="luxury-footer-note-icon"><Globe2 size={19} /></span>
           <span className="luxury-footer-note-label">PEOPLE WITHOUT BORDERS</span>
           <p>Global perspective.<br /><strong>Human connection.</strong></p>
-          <a href="#sectors" aria-label="Explore our recruitment sectors">
+          <Link to="/sectors" aria-label="Explore our recruitment sectors">
             Explore our industries <ArrowUpRight size={14} />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -105,7 +106,7 @@ function Footer() {
       <div className="luxury-footer-bottom">
         <span>© {new Date().getFullYear()} Amentis 7 Global Recruitment</span>
         <span className="luxury-footer-location"><span /> GLOBAL INDUSTRY RECRUITMENT</span>
-        <a href="#home">Back to top <ArrowRight size={13} /></a>
+        <Link to="/">Back to top <ArrowRight size={13} /></Link>
       </div>
     </footer>
   );
