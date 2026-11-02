@@ -15,7 +15,7 @@ const commitments = [
     icon: ShieldCheck,
     title: "No candidate service charges",
     description:
-      "Recruitment, consultation, and career guidance are free. Amentis 7 does not charge candidates service fees at any stage.",
+      "Recruitment, consultation, and career guidance are free. Amentis 7 Global will not charge candidates service fees at any stage.",
   },
   {
     icon: BadgeCheck,
@@ -66,7 +66,7 @@ function TrustContactSection() {
             <span className="payment-policy-kicker">A SMALL BUT IMPORTANT UPDATE</span>
             <h3>Recruitment is free for candidates</h3>
             <p className="payment-policy-lead">
-              Amentis 7 does not charge candidates recruitment, consultation,
+              Amentis 7 Global will not charge candidates recruitment, consultation,
               or career-guidance service fees before or after a visa. Our
               recruitment and career services are free.
             </p>

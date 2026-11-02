@@ -199,7 +199,7 @@ function OpportunityDetailPage() {
               <span><BadgeCheck size={18} /></span>
               <h3>Clear, careful guidance</h3>
               <p>
-                Amentis 7 does not charge candidates recruitment, consultation,
+                Amentis 7 Global will not charge candidates recruitment, consultation,
                 or career-guidance service fees before or after a visa. Any
                 official third-party costs, if applicable, will be explained
                 separately in writing before you proceed.
