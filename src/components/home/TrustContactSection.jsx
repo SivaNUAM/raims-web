@@ -13,8 +13,9 @@ import { Reveal } from "./Motion";
 const commitments = [
   {
     icon: ShieldCheck,
-    title: "No payment collected by Amentis 7",
-    description: "Amentis 7 Global will not collect any payment.",
+    title: "No candidate service charges",
+    description:
+      "Recruitment, consultation, and career guidance are free. Amentis 7 does not charge candidates service fees at any stage.",
   },
   {
     icon: BadgeCheck,
@@ -63,17 +64,17 @@ function TrustContactSection() {
           <div className="payment-policy-icon"><Megaphone size={19} /></div>
           <div className="payment-policy-content">
             <span className="payment-policy-kicker">A SMALL BUT IMPORTANT UPDATE</span>
-            <h3>100% Payment After Visa</h3>
+            <h3>Recruitment is free for candidates</h3>
             <p className="payment-policy-lead">
-              All our current programmes follow a 100% Payment After Visa
-              policy. If a visa is rejected, the candidate does not lose any
-              money.
+              Amentis 7 does not charge candidates recruitment, consultation,
+              or career-guidance service fees before or after a visa. Our
+              recruitment and career services are free.
             </p>
             <div className="payment-policy-divider" />
             <p>
-              We bear the financial risk of these programmes. Therefore,
-              candidate selection and onboarding are entirely at our
-              discretion.
+              Any official third-party costs, if applicable, will be explained
+              separately in writing before you proceed. Candidate selection and
+              onboarding remain at our discretion.
             </p>
             <p className="payment-policy-follow-up">
               We will personally contact candidates who meet our selection

@@ -199,10 +199,10 @@ function OpportunityDetailPage() {
               <span><BadgeCheck size={18} /></span>
               <h3>Clear, careful guidance</h3>
               <p>
-                Amentis 7 does not collect payment. Current programmes follow
-                a 100% Payment After Visa policy; if a visa is rejected, the
-                candidate does not lose money. Any case-specific terms should
-                be confirmed in writing through the licensed recruitment channel.
+                Amentis 7 does not charge candidates recruitment, consultation,
+                or career-guidance service fees before or after a visa. Any
+                official third-party costs, if applicable, will be explained
+                separately in writing before you proceed.
               </p>
             </div>
           </aside>

@@ -137,7 +137,7 @@ export const opportunities = [
         items: [
           "Salary up to €2,200 per month.",
           "Accommodation, medical insurance, and duty meal where applicable are listed.",
-          "A renewable 2-year work permit and an included air ticket are listed. The guide adds a note about freshers paying; clarify the exact ticket and any related terms in writing before proceeding.",
+          "A renewable 2-year work permit and an included air ticket are listed; confirm ticket availability and the exact terms for the specific vacancy.",
         ],
       },
       {
@@ -147,7 +147,7 @@ export const opportunities = [
           "Profile and document submission, followed by employer and application processing.",
           "The guide estimates a total processing period of 4–6 months.",
           "Job offer, work permit, consent letter, and VFS appointment details are listed as process documents.",
-          "Visa submission at VFS, visa decision, and travel follow. Any payment terms must follow Amentis 7's stated no-upfront-payment policy.",
+          "Visa submission at VFS, visa decision, and travel follow. Recruitment, consultation, and career-guidance services from Amentis 7 are free to candidates.",
         ],
       },
       {
