@@ -32,13 +32,14 @@ function AboutSection() {
           <h2>Better people.<br />Stronger teams.<br /><em>Everywhere.</em></h2>
           <div className="intro-copy">
             <p className="intro-lead">
-              The right people make a real difference in every industry.
+              Free recruitment support. Verified opportunities. Clearer next steps.
             </p>
             <p>
-              We connect employers with exceptional talent across technology,
-              finance, engineering, consumer, and supply chain industries.
-              Our people-first approach is shaped around the skills, standards,
-              and realities of each market.
+              Based in Kochi, Kerala, Amentis 7 Global shares vacancies from
+              verified and authorized recruitment sources in India and overseas.
+              Jobseekers can access recruitment consultation and career guidance
+              free of charge. Vacancy requirements and selection decisions remain
+              with the respective employers and authorized recruitment partners.
             </p>
             <div className="founder-profile">
               <img

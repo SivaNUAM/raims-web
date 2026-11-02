@@ -8,7 +8,7 @@ function AboutPage() {
       eyebrow="ABOUT AMENTIS 7"
       title="People-first recruitment."
       emphasis="Worldwide."
-      description="We connect ambitious businesses with people who can make a meaningful difference—across markets, industries, and borders."
+      description="Amentis 7 Global is a free professional recruitment and career services company based in Kochi, Kerala, India, connecting jobseekers with employment opportunities in India and overseas for free. We share vacancies from verified and authorized recruitment sources and provide free recruitment consultation and career guidance."
     >
       <AboutSection />
       <ApproachSection />

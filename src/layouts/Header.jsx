@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { ArrowDownRight, ArrowUpRight, Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowDownRight, ArrowUpRight, Globe2, Menu, MoveUpRight, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
@@ -12,8 +12,41 @@ const navigation = [
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef(null);
+  const navRef = useRef(null);
 
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    const mobileViewport = window.matchMedia("(max-width: 700px)");
+    if (mobileViewport.matches) {
+      document.body.style.overflow = "hidden";
+      navRef.current?.querySelector("a")?.focus();
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    const closeOnDesktopResize = () => {
+      if (!mobileViewport.matches) setMenuOpen(false);
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("resize", closeOnDesktopResize);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("resize", closeOnDesktopResize);
+    };
+  }, [menuOpen]);
 
   return (
     <header className="site-header luxury-header">
@@ -32,6 +65,7 @@ function Header() {
         </Link>
 
         <button
+          ref={menuButtonRef}
           className="luxury-menu-toggle"
           type="button"
           aria-label={menuOpen ? "Close navigation" : "Open navigation"}
@@ -43,19 +77,34 @@ function Header() {
         </button>
 
         <nav
+          ref={navRef}
           className={`luxury-nav${menuOpen ? " is-open" : ""}`}
           id="primary-navigation"
           aria-label="Main navigation"
         >
+          <div className="luxury-mobile-nav-heading">
+            <span><Globe2 size={14} /> EXPLORE AMENTIS 7</span>
+            <p>Find your next step.<br /><em>Make it matter.</em></p>
+          </div>
           {navigation.map((item, index) => (
-            <Link to={item.href} key={item.href} onClick={closeMenu}>
+            <Link
+              to={item.href}
+              key={item.href}
+              onClick={closeMenu}
+              style={{ "--nav-index": index }}
+            >
               <span className="luxury-nav-index">0{index + 1}</span>
-              {item.label}
+              <span className="luxury-nav-label">{item.label}</span>
+              <MoveUpRight className="luxury-nav-arrow" size={17} aria-hidden="true" />
             </Link>
           ))}
-          <Link className="luxury-nav-cta" to="/contact" onClick={closeMenu}>
-            Let&apos;s talk <ArrowUpRight size={15} strokeWidth={1.7} />
-          </Link>
+          <div className="luxury-mobile-nav-bottom">
+            <span>READY FOR A CONVERSATION?</span>
+            <Link className="luxury-nav-cta" to="/contact" onClick={closeMenu}>
+              Let&apos;s talk <ArrowUpRight size={16} strokeWidth={1.7} />
+            </Link>
+            <p>Connecting talent. Creating futures.</p>
+          </div>
         </nav>
       </div>
       <div className="luxury-header-rule" aria-hidden="true">

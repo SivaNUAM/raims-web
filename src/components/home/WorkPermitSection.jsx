@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
   BriefcaseBusiness,
@@ -8,135 +9,7 @@ import {
   Search,
   Wallet,
 } from "lucide-react";
-
-const opportunities = [
-  {
-    country: "Germany",
-    flag: "DE",
-    region: "Europe",
-    route: "Work permit · Type D route in supplied guide",
-    pay: "Up to €2,200 / month",
-    timeline: "Approx. 5–6 months",
-    roles: ["Warehouse & production", "Food packing", "Forklift operator", "Hospitality"],
-  },
-  {
-    country: "Luxembourg",
-    flag: "LU",
-    region: "Europe",
-    route: "Work permit",
-    pay: "Up to €2,900 / month",
-    timeline: "Approx. 6 months",
-    roles: ["Warehouse worker", "Production worker", "Supermarket worker"],
-  },
-  {
-    country: "Netherlands",
-    flag: "NL",
-    region: "Europe",
-    route: "Work permit",
-    pay: "Up to €2,200 / month",
-    timeline: "Approx. 5 months",
-    roles: ["Warehouse & production", "Commis chef", "Bartender", "Waiter / waitress"],
-  },
-  {
-    country: "Switzerland",
-    flag: "CH",
-    region: "Europe",
-    route: "Work permit",
-    pay: "Up to CHF 2,600 / month",
-    timeline: "Approx. 6 months",
-    roles: ["Hotel chef", "Commis chef", "Baker", "Bartender"],
-  },
-  {
-    country: "United Kingdom",
-    flag: "GB",
-    region: "Europe",
-    route: "Employer-sponsored work route · current category varies",
-    pay: "Up to £2,500 / month",
-    timeline: "Approx. 6 months",
-    roles: ["Restaurant assistant", "Chef"],
-  },
-  {
-    country: "Austria",
-    flag: "AT",
-    region: "Europe",
-    route: "Work permit",
-    pay: "Up to €2,200 / month",
-    timeline: "Approx. 5 months",
-    roles: ["Warehouse worker", "Room attendant", "Housekeeping"],
-  },
-  {
-    country: "France",
-    flag: "FR",
-    region: "Europe",
-    route: "Work permit",
-    pay: "Up to €1,900 / month",
-    timeline: "Approx. 4–5 months",
-    roles: ["Warehouse & logistics", "Agriculture", "Plumber", "Welder / electrician"],
-  },
-  {
-    country: "Ireland",
-    flag: "IE",
-    region: "Europe",
-    route: "Work permit",
-    pay: "€2,200–€3,500 / month",
-    timeline: "Approx. 5–6 months",
-    roles: ["Warehouse & production", "Kitchen assistant", "Hospitality"],
-  },
-  {
-    country: "Albania",
-    flag: "AL",
-    region: "Europe",
-    route: "Work permit",
-    pay: "€750–€800 / month",
-    timeline: "Approx. 2–3 months",
-    roles: ["Fruit & vegetable packing", "Construction", "Gypsum / POP work"],
-  },
-  {
-    country: "Georgia",
-    flag: "GE",
-    region: "Europe",
-    route: "Work opportunity",
-    pay: "Up to €700 / month",
-    timeline: "Guide estimate: under 2 months",
-    roles: ["Construction", "Hotel & hospitality", "Factory & production"],
-  },
-  {
-    country: "Armenia",
-    flag: "AM",
-    region: "Europe",
-    route: "Work opportunity",
-    pay: "€875–€1,100 / month",
-    timeline: "Approx. 4–6 months",
-    roles: ["Delivery / taxi", "Construction"],
-  },
-  {
-    country: "Belarus",
-    flag: "BY",
-    region: "Europe",
-    route: "Work permit",
-    pay: "Up to €800 / month",
-    timeline: "Guide estimate: up to 45 days",
-    roles: ["Livestock farm work"],
-  },
-  {
-    country: "Canada",
-    flag: "CA",
-    region: "Further afield",
-    route: "Employer-specific route · LMIA referenced in supplied guide",
-    pay: "From CAD 19 / hour",
-    timeline: "Approx. 6–8 months",
-    roles: ["Warehouse & production", "Food packing", "Factory roles", "Supermarket roles"],
-  },
-  {
-    country: "New Zealand",
-    flag: "NZ",
-    region: "Further afield",
-    route: "Accredited Employer Work Visa (AEWV) referenced in supplied guide",
-    pay: "NZD 29 / hour",
-    timeline: "Approx. 5–6 months",
-    roles: ["Warehouse & production", "Supermarket roles", "Packing", "Hospitality"],
-  },
-];
+import { getOpportunitySlug, opportunities } from "../../data/opportunities";
 
 const filters = ["All destinations", "Europe", "Further afield"];
 
@@ -189,9 +62,9 @@ function OpportunityCard({ opportunity, isExpanded, onToggle }) {
           employer, pay, deductions, benefits, and permit requirements.
         </p>
       </div>
-      <a className="opportunity-contact" href="#contact">
+      <Link className="opportunity-contact" to={`/opportunities/${getOpportunitySlug(opportunity.country)}`}>
         Enquire about {opportunity.country} <ArrowUpRight size={15} aria-hidden="true" />
-      </a>
+      </Link>
     </article>
   );
 }
