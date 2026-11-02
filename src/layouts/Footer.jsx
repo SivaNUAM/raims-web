@@ -12,12 +12,6 @@ const offices = [
     label: "TAMIL NADU",
     address: "Porur, Chennai, Tamil Nadu 600116, India",
   },
-  {
-    city: "Jaipur",
-    label: "RAJASTHAN",
-    address:
-      "Narayan Singh Circle Foot Over Bridge, Rambagh, Jaipur, Rajasthan 302004, India",
-  },
 ];
 
 const companyLinks = [
