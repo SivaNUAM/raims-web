@@ -61,7 +61,7 @@ button {
 }
 
 .site-shell {
-  overflow: hidden;
+  overflow: clip;
 }
 
 .site-header {
